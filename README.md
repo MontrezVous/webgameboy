@@ -6,7 +6,7 @@ Play at your own pace and enjoy the nostalgia !
 
 Try the Game Boy Color on your smartphone now : https://gameboy.montrezvous.net
 
-Included 177 GBC games are freely available, originally released over 20 years ago, with copyrights that have since expired.
+Included 177 GBC Games are Freely Available, originally released over 20 years ago, with CR that have since expired.
 
 Smartphone Web Integrated by Mathieu Ribot – MontrezVous.net
 JS Emulator by emulatorjs.com
