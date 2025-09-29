@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Google Tag Manager -->
+      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-NKHPSR8V');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" href="css/mobile.css"/>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKHPSR8V"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="gameboy_shell">
+      <span style="visibility:hidden;" id="on_off">OFF ! ! ON</span>
+      <button id="savestate">SAUVEG</button>
+      <button id="suppstate">SUPP</button>
+      <button id="loadstate9">S9</button>
+      <button id="loadstate8">S8</button>
+      <button id="loadstate7">S7</button>
+      <button id="loadstate6">S6</button>
+      <button id="loadstate5">S5</button>
+      <button id="loadstate4">S4</button>
+      <button id="loadstate3">S3</button>
+      <button id="loadstate2">S2</button>
+      <button id="loadstate">S1</button>
+      
+
+      <div id="screen_cover">
+        <div id="power">
+          <div class="two_column">
+            <div id="power_light"></div>
+            <div>)))</div>
+          </div>
+          SOUND
+        </div>
+        <div id="canvas_container" ><!-- style="display: inline-block;transform: rotate(90deg);transform-origin: center;" -->
+          <canvas id="mainCanvas" width="300px" height="200px" style="margin-left: 6px;">No Canvas Support</canvas>
+        </div>
+        <div>
+          <span id="pocket"></span>
+        </div>
+      </div>
+      <div id="nintendo"></div><div id="buttons" style="display: flex; flex-direction: column;"></div>
+      <div id="d_pad">
+
+        <!--<div id="d_pad_up">
+          <div id="arrow_up_left" data-key-zone="up_left"></div>
+          <div id="arrow_up" data-key-zone="up"></div>
+          <div id="arrow_up_right" data-key-zone="up_right"></div>
+        </div>-->
+
+        <div id="d_pad_up">
+          <div id="arrow_up" data-key-zone="up"></div>
+        </div>
+        <div id="d_pad_left_right">
+          <div id="d_pad_left">
+            <div id="arrow_left" data-key-zone="left"></div>
+          </div>
+          <div id="d_pad_right">
+            <div id="arrow_right" data-key-zone="right"></div>
+          </div>
+          <!--<div id="d_pad_center"></div>-->
+        </div>
+        <div id="d_pad_down">
+          <div id="arrow_down" data-key-zone="down"></div>
+        </div>
+      </div>
+      <div id="a_button_group" class="button_group" data-key-zone="a">
+        <div class="round_button"></div>
+        A
+      </div>
+      <div id="b_button_group" class="button_group" data-key-zone="b">
+        <div class="round_button"></div>
+        B
+      </div>
+
+      <div id="game_button_group" class="button_group" data-key-zone="select">
+        <select id="game-select" onchange="this.options[this.selectedIndex].value && (window.location = 'http://localhost/gameboyslim/?game='+this.options[this.selectedIndex].value);"> 
+            <option value="tetrisdx">Tetris (C)</option> 
+            <option value="drm">Dr. Mario (C)</option>
+            <option value="kdx">Kirby 1 (C)</option>
+            <option value="kirby2">Kirby 2 (C)</option>
+            <option value="solar">Solar-Striker</option>
+            <option value="mq">Mystic-Quest</option>
+            <option value="cmr2">Colin McRae Rally</option>
+            <option value="zd">Zelda 1 (C)</option>
+            <option value="zelda2">Zelda 2 (C)</option>
+            <option value="lz">Zelda 3 (C)</option>
+            <option value="roilion">Roi-Lion 1</option>
+            <option value="roilion2">Roi-Lion 2 (C)</option>
+            <option value="ll">Lucky-Luke (C)</option>
+            <option value="Mario1DX">Mario 1 (C)</option>
+            <option value="Mario2DX" selected="selected">Mario 2 (C)</option>
+            <option value="smb3">Mario 3 (C)</option>
+            <option value="mario3">Wario 1</option>
+            <option value="mario4dx">Wario 2 (C)</option>
+            <option value="wario3">Wario 3 (C)</option>
+            <option value="mariobross">Mario-Bros (C)</option>
+            <option value="aladdin">Aladdin (C)</option>
+            <option value="park">South-Park (C)</option>
+            <option value="mm">Micro-Machines (C)</option>
+            <option value="toy">Toy-Story Racer (C)</option>
+            <option value="toy2">Toy-Story 2 (C)</option>
+            <option value="re">Resident-Evil 1 (C)</option>
+            <option value="ret">Resident-Evil 2 (C)</option>
+            <option value="robocop">Robocop (C)</option>
+            <option value="sht">Shantae (C)</option>
+            <option value="ad">Azure-Dreams (C)</option>
+            <option value="asterix1">Asterix 1</option>
+            <option value="ast">Asterix 2 (C)</option>
+            <option value="dwx">Dragon Warrior 1 & 2 (C)</option>
+            <option value="dw">Drag-Warrior 3 (C)</option>
+            <option value="metroid2">Metroid 2</option>
+            <option value="rtype">R-Type (C)</option>
+            <option value="contra">Contra</option>
+            <option value="dd1">Double-Dragon 1</option>
+            <option value="dd2">Double-Dragon 2</option>
+            <option value="dd3">Double-Dragon 3</option>
+            <option value="dkc">Donkey-Kong (C)</option>
+            <option value="dk2">Donkey-Kong 2</option>
+            <option value="dk3">Donkey-Kong 3</option>
+            <option value="tt1">Tortues-Ninja 1</option>
+            <option value="tt2">Tortues-Ninja 2</option>
+            <option value="tt3">Tortues-Ninja 3</option>
+            <option value="castle">Castlevania-Advt</option>
+            <option value="castle2">Castlevania 2</option>
+            <option value="ff1">Final-Fantasy 1</option>
+            <option value="ff2">Final-Fantasy 2</option>
+            <option value="ff3">Final-Fantasy 3</option>
+            <option value="mgs">Metal-Gear-Solid (C)</option>
+            <option value="dbz">Dragon-Ball Z (C)</option>
+            <option value="ps">Planête-des-Singes (C)</option>
+            <option value="gta">GTA 1 (C)</option>
+            <option value="gta2">GTA 2 (C)</option>
+            <option value="gb">Ghost-Busters (C)</option>
+            <option value="tz">Tarzan (C)</option>
+            <option value="harrycs">Harry-Potter (C)</option>
+            <option value="harryc2">Harry-Potter 2 (C)</option>
+            <option value="austin">Austin-Powers (C)</option>
+            <option value="pokemona">Pokémon-Argent (C)</option>
+            <option value="pokemonc">Pokémon-Cristal (C)</option>
+            <option value="pokemono">Pokémon-Or (C)</option>
+            <option value="pp">Pokémon Pinball (C)</option>
+            <option value="fighter">Street-Fighter (C)</option>
+            <option value="jim">Earthworm-Jim (C)</option>
+            <option value="hercules">Hercules (C)</option>
+            <option value="looneytunes1">Looney-Tunes (C)</option>
+            <option value="gex1">Gex (C)</option>
+            <option value="gex3">Gex 3 (C)</option>
+            <option value="rayman1">Rayman 1 (C)</option>
+            <option value="rayman2">Rayman 2 (C)</option>
+            <option value="tgr1">Gear-Rally 1 (C)</option>
+            <option value="tgr2">Gear-Rally 2 (C)</option>
+            <option value="bbunny1">Bugs-Bunny 1 (C)</option>
+            <option value="bbunny2">Bugs-Bunny 2 (C)</option>
+            <option value="addams">Fam. Addams (C)</option>
+            <option value="livre">Livre-Jungle (C)</option>
+            <option value="winnie">Winnie-Ourson (C)</option>
+            <option value="agent007">Agent-007 (C)</option>
+            <option value="ig">Insp. Gadget (C)</option>
+            <option value="testdrive">Test-Drive (C)</option>
+            <option value="testdrive6">Test-Drive 6 (C)</option>
+            <option value="turok1">Turok 1 (C)</option>
+            <option value="turok2">Turok 2 (C)</option>
+            <option value="turok3">Turok 3 (C)</option>
+            <option value="xmen1">X-Men 1 (C)</option>
+            <option value="xmen2">X-Men 2 (C)</option>
+            <option value="xmen3">X-Men 3 (C)</option>
+            <option value="worms">Worms (C)</option>
+            <option value="megaman1">Mega-Man 1 (C)</option>
+            <option value="megaman2">Mega-Man 2 (C)</option>
+            <option value="mib1">Men-In-Black 1 (C)</option>
+            <option value="mib2">Men-In-Black 2 (C)</option>
+            <option value="merlin">Merlin (C)</option>
+            <option value="dn">Duke-Nukem (C)</option>
+            <option value="dracula">Dracula (C)</option>
+            <option value="indiana">Indiana-Jones (C)</option>
+            <option value="croc1">Croc 1 (C)</option>
+            <option value="croc2">Croc 2 (C)</option>
+            <option value="robin">Robin-des-Bois (C)</option>
+            <option value="rob">RoboCop (C)</option>
+            <option value="gremlins">Gremlins (C)</option>
+            <option value="grinch">Grinch (C)</option>
+            <option value="casper">Casper (C)</option>
+            <option value="smurfs">Schtroumpfs (C)</option>
+            <option value="sm">Schtroumpfs 2 (C)</option>
+            <option value="scooby">Scooby-Doo (C)</option>
+            <option value="spiderman1">Spider-Man 1 (C)</option>
+            <option value="spiderman2">Spider-Man 2 (C)</option>
+            <option value="bob">Bob-Éponge (C)</option>
+            <option value="spirou">Spirou (C)</option>
+            <option value="simpsons">Simpsons (C)</option>
+            <option value="speedy">S. Gonzales(C)</option>
+            <option value="nutz">Mr. Nutz (C)</option>
+            <option value="nascar">Nascar (C)</option>
+            <option value="blaster">Blaster (C)</option>
+            <option value="blade">Blade (C)</option>
+            <option value="tr1">Tomb-Raider 1 (C)</option>
+            <option value="tr2">Tomb-Raider 2 (C)</option>
+            <option value="taz">Taz (C)</option>
+            <option value="xena">Xena (C)</option>
+            <option value="wwf">WWF (C)</option>
+            <option value="disney">Disney-Racer (C)</option>
+            <option value="dalma">Dalmatiens (C)</option>
+            <option value="bust1">Bust-Move 1 (C)</option>
+            <option value="bust2">Bust-Move 2 (C)</option>
+            <option value="cg">Carmageddon (C)</option>
+            <option value="cw">Cat-Woman (C)</option>
+            <option value="cr">Chicken-Run (C)</option>
+            <option value="donald">Donald-Duck (C)</option>
+            <option value="doug">Doug (C)</option>
+            <option value="dz">Drop-Zone (C)</option>
+            <option value="et2">E.T (C)</option>
+            <option value="fs">Flintstones (C)</option>
+            <option value="ht">Hamtaro (C)</option>
+            <option value="hw">Hot-Wheels (C)</option>
+            <option value="tf1">Track & Field 1 (C)</option>
+            <option value="tf2">Track & Field 2 (C)</option>
+            <option value="cross">Supercross (C)</option>
+            <option value="mi">M. Impossible (C)</option>
+            <option value="pf">Pitfall (C)</option>
+            <option value="pd">Perfect-Dark (C)</option>
+            <option value="r2r">Ready-Rumble (C)</option>
+            <option value="rr">Road-Rash (C)</option>
+            <option value="sfr">Rush-2049 (C)</option>
+            <option value="tj">Tom & Jerry (C)</option>
+            <option value="rs">Rainbow-Six (C)</option>
+            <option value="vrally">V-Rally (C)</option>
+            <option value="jp1">Jurassic-Park</option>
+            <option value="jp2">Jurassic-Park 2</option>
+            <option value="tt">Thunder-Tanks (C)</option>
+            <option value="dh">Dragon-Heart</option>
+            <option value="val">Prince-Valiant</option>
+            <option value="drf">Dr. Franken 2</option>
+            <option value="lego1">Lego 1 (C)</option>
+            <option value="lego2">Lego 2 (C)</option>
+            <option value="alf">Alfred's Advent (C)</option>
+            <option value="am2">Army-Men 2 (C)</option>
+            <option value="di">Dinosaur (C)</option>
+            <option value="dai">Daikatana (C)</option>
+            <option value="wf">Wings-of-Fury (C)</option>
+            <option value="pr">Papyrus (C)</option>
+            <option value="at">Atlantide (C)</option>
+            <option value="alice">Alice-au-Pays (C)</option>
+            <option value="titi">Titi & Grosminet (C)</option>
+            <option value="mr">Retour-Mommy (C)</option>
+            <option value="tif">Titeuf (C)</option>
+            <option value="sk">Stranded-Kids (C)</option>
+            <option value="fel">Felix le Chat (C)</option>
+            <option value="oag">Pour L'Or et la Gloire (C)</option>
+            <option value="sg">Shadowgate (C)</option>
+            <option value="tot">Tonic Trouble (C)</option>
+            <option value="qc">Quest for Camelot (C)</option>
+            <option value="az">Antz (C)</option>
+            <option value="hat">Hands of Time (C)</option>
+
+            
+<!-- <option value=""> (C)</option>999
+            
+            <option value="spider">Spider-Man (C)</option>
+            <option value="dkcc">Donkey Kong Country (C)</option>
+            <option value="kirby">Kirby</option>
+            <option value="mario2">Mario 2</option>
+            <option value="mario1">Mario</option>
+            <option value="mario2">Mario 2</option>
+            <option value="zelda">Zelda</option>
+            <option value="pacman">Pacman (C)</option>
+            <option value="tetris">Tetris</option>
+            <option value="bn">Bat. Navale</option>
+            <option value="scrabble">Scrabble (C)</option>
+            <option value="chessmaster">Chessmaster (C)</option>
+            <option value="pong">Pong (C)</option>
+            <option value="cb">Cool Bricks (C)</option>
+            <option value="bubble">Bubble Bobble (C)</option>
+            <option value="mmadness">M.Madness (C)</option>
+            <option value="cp">Centipede (C)</option>
+            <option value="fifa2000">FIFA 2000 (C)</option>
+            <option value="fb">Fort Boyard (C)</option>
+            <option value="hm">Heroes MM 2 (C)</option>
+            <option value="cp2">Caesar Palace 2 (C)</option>
+            <option value="rampage1">Rampage 1 (C)</option>
+            <option value="rampage2">Rampage 2 (C)</option>
+            <option value="mk4">M. Kombat 4 (C)</option>
+            <option value="kirikou">Kirikou (C)</option>
+            <option value="razmoket1">Razmoket 1 (C)</option>
+            <option value="razmoket2">Razmoket 2 (C)</option>
+            <option value="razmoket3">Razmoket 3 (C)</option>
+            <option value="zorro">Zorro (C)</option>
+            <option value="yoda">Yoda Stories (C)</option>
+            <option value="ttt">Tintin 2x</option>
+            <option value="monop">Monopoly</option>
+            <option value="fb">Fort Boyard</option>
+            <option value="driver1">Driver 1 (C)</option>
+            <option value="driver2">Driver 2 (C)</option>
+            <option value="am">Army Men (C)</option>
+            <option value="toca">TOCA (C)</option>
+            <option value="tiger">Tiger Woods (C)</option>
+            <option value="tony">Tony Hawks (C)</option>
+            <option value="fish">Fish Files (C)</option>
+            <option value="batman">Batman (C)</option>
+            <option value="tintin1">Tintin 1 (C)</option>
+            <option value="tintin2">Tintin 2</option>
+            <option value="buffy">Buffy (C)</option>
+            <option value="taxi2">Taxi2 (C)</option>
+            <option value="taxi3">Taxi3 (C)</option>
+            <option value="paper">Paperboy (C)</option>
+            <option value="tg">Top Gun (C)</option>
+            <option value="ri">Rainbow Islands (C)</option>
+            <option value="vip">VIP (C)</option>
+            <option value="swa">Star Wars (C)</option>
+            <option value="visiteurs">Visiteurs (C)</option>
+            <option value="spirouo">Spirou</option>
+            <option value="buzz">Buzz Éclair (C)</option>
+            <option value="maya1">Maya Abeille 1 (C)</option>
+            <option value="maya2">Maya Abeille 2 (C)</option>
+            <option value="asterix2">Asterix 2</option>
+            <option value="chase">Chase (C)</option>
+
+            <option value="aitd">Alone in the Dark (C)</option>
+            <option value="looneytunes2">Looney Tunes 2(C)</option>
+            <option value="indienville">Indien dans la Ville</option>
+            <option value="dk">Donkey Kong</option>
+            <option value="cmrr">Colin McRae Rally</option>
+            <option value="tgr2">Top Gear Rally 2</option>
+            <option value="ig">Inspector Gadget</option>
+            <option value="oa2">Oddworld 2</option>
+            <option value="pkmr">Pokémon V.Rouge</option>
+            <option value="MarioDX">Mario (C)</option>
+            <option value="Mario2DX">Mario 2 (C)</option>
+            <option value="Taxi2">Taxi 2 (C)</option>
+            <option value="TombRaider">Tomb Raider (C)</option>
+            <option value="ToyStory2">Toy Story 2 (C)</option>
+            <option value="WarioLandSuperMarioLand3DX">Wario 3 (C)
+            <option value="lucky">Lucky Luke</option></option>
+            <option value="mario4">Wario 2</option>-->
+        </select>
+        <span class="cursorgb">
+          <input type="range" id="vitessegb" name="vitessegb" min="0.1" max="3" step="0.1" value="1" oninput="vitessechg(this.value)" onchange="vitessechg(this.value)" />
+          <span id="xvitesse">x1</span>
+        </span>
+        
+        <span class="cursorgb">
+          <input type="range" id="volumegb" name="volumegb" min="0" max="1" step="0.1" value="1" oninput="soundchg(this.value)" onchange="soundchg(this.value)" />
+          <span id="xvolume">100%</span>
+        </span>
+      </div>
+      <div id="pause_cpu_clicker" class="button_group">
+        <div class="flat_button"></div>
+        PAUSE 
+      </div>
+
+      <div id="run_cpu_clicker" class="button_group">
+        <div class="flat_button"></div>
+        PAUSE
+      </div>
+      
+      <div id="select_button_group" class="button_group" data-key-zone="select">
+        <div class="flat_button"></div>
+        SELECT
+      </div>
+      <div id="start_button_group" class="button_group" data-key-zone="start">
+        <div class="flat_button"></div>
+        START
+      </div>
+      <img id="speaker" src="images/speaker.png"/>
+    </div>
+    <script src="js/other/windowStack.js"></script>
+    <!--<script src="js/other/terminal.js"></script>-->
+    <script src="js/other/mobile.js"></script>
+    <script src="js/other/base65.js"></script>
+    <script src="js/other/json2.js"></script>
+    <script src="js/other/swfobject.js"></script>
+    <script src="js/other/resampler.js"></script>
+    <script src="js/other/XAudioServer.js"></script>
+    <script src="js/other/resize.js"></script>
+    <script src="js/GameBoyCore.js"></script>
+    <script src="js/GameBoyIO.js"></script>
+  </body>
+</html>
