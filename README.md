@@ -1,8 +1,10 @@
-This project allows you to play Game Boy Color games directly from your smartphone’s browser.
-The save buttons use cookies so you can resume your game later, a game speed slider is also available, enjoy ;)
-Feel free to try the Game Boy Color on your smartphone: https://gameboy.montrezvous.net
+This project brings Game Boy Color games straight to your smartphone’s browser — no downloads required.
+Save your progress with one click (thanks to cookies) and even control the game speed with a handy slider.
 
-All the GBC games included in this project are freely available. They were published over 20 years ago, and their copyrights have since expired.
+Play at your own pace and enjoy the nostalgia!
+Try the Game Boy Color on your smartphone now: https://gameboy.montrezvous.net
 
-Integration web by Mathieu Ribot – MontrezVous.net
-Game Boy Emulator from emulatorjs.com
+All included GBC games are freely available, originally released over 20 years ago, with copyrights that have since expired.
+
+Web Integrated by Mathieu Ribot – MontrezVous.net
+JS Emulator by emulatorjs.com
