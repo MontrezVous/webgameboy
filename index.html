@@ -1,22 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- Google Tag Manager -->
-      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-NKHPSR8V');</script>
-    <!-- End Google Tag Manager -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <link rel="stylesheet" href="css/mobile.css"/>
   </head>
   <body>
-    <!-- Google Tag Manager (noscript) -->
-      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKHPSR8V"
-      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
     <div id="gameboy_shell">
       <span style="visibility:hidden;" id="on_off">OFF ! ! ON</span>
       <button id="savestate">SAUVEG</button>
@@ -40,7 +29,7 @@
           </div>
           SOUND
         </div>
-        <div id="canvas_container" ><!-- style="display: inline-block;transform: rotate(90deg);transform-origin: center;" -->
+        <div id="canvas_container" >
           <canvas id="mainCanvas" width="300px" height="200px" style="margin-left: 6px;">No Canvas Support</canvas>
         </div>
         <div>
@@ -50,11 +39,6 @@
       <div id="nintendo"></div><div id="buttons" style="display: flex; flex-direction: column;"></div>
       <div id="d_pad">
 
-        <!--<div id="d_pad_up">
-          <div id="arrow_up_left" data-key-zone="up_left"></div>
-          <div id="arrow_up" data-key-zone="up"></div>
-          <div id="arrow_up_right" data-key-zone="up_right"></div>
-        </div>-->
 
         <div id="d_pad_up">
           <div id="arrow_up" data-key-zone="up"></div>
@@ -66,7 +50,7 @@
           <div id="d_pad_right">
             <div id="arrow_right" data-key-zone="right"></div>
           </div>
-          <!--<div id="d_pad_center"></div>-->
+          
         </div>
         <div id="d_pad_down">
           <div id="arrow_down" data-key-zone="down"></div>
@@ -260,86 +244,6 @@
             <option value="qc">Quest for Camelot (C)</option>
             <option value="az">Antz (C)</option>
             <option value="hat">Hands of Time (C)</option>
-
-            
-<!-- <option value=""> (C)</option>999
-            
-            <option value="spider">Spider-Man (C)</option>
-            <option value="dkcc">Donkey Kong Country (C)</option>
-            <option value="kirby">Kirby</option>
-            <option value="mario2">Mario 2</option>
-            <option value="mario1">Mario</option>
-            <option value="mario2">Mario 2</option>
-            <option value="zelda">Zelda</option>
-            <option value="pacman">Pacman (C)</option>
-            <option value="tetris">Tetris</option>
-            <option value="bn">Bat. Navale</option>
-            <option value="scrabble">Scrabble (C)</option>
-            <option value="chessmaster">Chessmaster (C)</option>
-            <option value="pong">Pong (C)</option>
-            <option value="cb">Cool Bricks (C)</option>
-            <option value="bubble">Bubble Bobble (C)</option>
-            <option value="mmadness">M.Madness (C)</option>
-            <option value="cp">Centipede (C)</option>
-            <option value="fifa2000">FIFA 2000 (C)</option>
-            <option value="fb">Fort Boyard (C)</option>
-            <option value="hm">Heroes MM 2 (C)</option>
-            <option value="cp2">Caesar Palace 2 (C)</option>
-            <option value="rampage1">Rampage 1 (C)</option>
-            <option value="rampage2">Rampage 2 (C)</option>
-            <option value="mk4">M. Kombat 4 (C)</option>
-            <option value="kirikou">Kirikou (C)</option>
-            <option value="razmoket1">Razmoket 1 (C)</option>
-            <option value="razmoket2">Razmoket 2 (C)</option>
-            <option value="razmoket3">Razmoket 3 (C)</option>
-            <option value="zorro">Zorro (C)</option>
-            <option value="yoda">Yoda Stories (C)</option>
-            <option value="ttt">Tintin 2x</option>
-            <option value="monop">Monopoly</option>
-            <option value="fb">Fort Boyard</option>
-            <option value="driver1">Driver 1 (C)</option>
-            <option value="driver2">Driver 2 (C)</option>
-            <option value="am">Army Men (C)</option>
-            <option value="toca">TOCA (C)</option>
-            <option value="tiger">Tiger Woods (C)</option>
-            <option value="tony">Tony Hawks (C)</option>
-            <option value="fish">Fish Files (C)</option>
-            <option value="batman">Batman (C)</option>
-            <option value="tintin1">Tintin 1 (C)</option>
-            <option value="tintin2">Tintin 2</option>
-            <option value="buffy">Buffy (C)</option>
-            <option value="taxi2">Taxi2 (C)</option>
-            <option value="taxi3">Taxi3 (C)</option>
-            <option value="paper">Paperboy (C)</option>
-            <option value="tg">Top Gun (C)</option>
-            <option value="ri">Rainbow Islands (C)</option>
-            <option value="vip">VIP (C)</option>
-            <option value="swa">Star Wars (C)</option>
-            <option value="visiteurs">Visiteurs (C)</option>
-            <option value="spirouo">Spirou</option>
-            <option value="buzz">Buzz Éclair (C)</option>
-            <option value="maya1">Maya Abeille 1 (C)</option>
-            <option value="maya2">Maya Abeille 2 (C)</option>
-            <option value="asterix2">Asterix 2</option>
-            <option value="chase">Chase (C)</option>
-
-            <option value="aitd">Alone in the Dark (C)</option>
-            <option value="looneytunes2">Looney Tunes 2(C)</option>
-            <option value="indienville">Indien dans la Ville</option>
-            <option value="dk">Donkey Kong</option>
-            <option value="cmrr">Colin McRae Rally</option>
-            <option value="tgr2">Top Gear Rally 2</option>
-            <option value="ig">Inspector Gadget</option>
-            <option value="oa2">Oddworld 2</option>
-            <option value="pkmr">Pokémon V.Rouge</option>
-            <option value="MarioDX">Mario (C)</option>
-            <option value="Mario2DX">Mario 2 (C)</option>
-            <option value="Taxi2">Taxi 2 (C)</option>
-            <option value="TombRaider">Tomb Raider (C)</option>
-            <option value="ToyStory2">Toy Story 2 (C)</option>
-            <option value="WarioLandSuperMarioLand3DX">Wario 3 (C)
-            <option value="lucky">Lucky Luke</option></option>
-            <option value="mario4">Wario 2</option>-->
         </select>
         <span class="cursorgb">
           <input type="range" id="vitessegb" name="vitessegb" min="0.1" max="3" step="0.1" value="1" oninput="vitessechg(this.value)" onchange="vitessechg(this.value)" />
@@ -372,7 +276,6 @@
       <img id="speaker" src="images/speaker.png"/>
     </div>
     <script src="js/other/windowStack.js"></script>
-    <!--<script src="js/other/terminal.js"></script>-->
     <script src="js/other/mobile.js"></script>
     <script src="js/other/base65.js"></script>
     <script src="js/other/json2.js"></script>
@@ -383,4 +286,5 @@
     <script src="js/GameBoyCore.js"></script>
     <script src="js/GameBoyIO.js"></script>
   </body>
+  <!-- created by Mathieu Ribot - MontrezVous.net-->
 </html>
